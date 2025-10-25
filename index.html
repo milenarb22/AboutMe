@@ -2,12 +2,113 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
+
+    <!-- CSS embebido: copiá y pegá este único archivo index.html -->
+    <style>
+    :root{
+      --bg1: #f8fafc;
+      --bg2: #eef2ff;
+      --card-bg: #ffffff;
+      --accent: #6b46c1;
+      --muted: #6b7280;
+      --radius: 12px;
+      --max-width: 760px;
+      --shadow: 0 6px 18px rgba(43,52,69,0.08);
+      --gap: 1rem;
+    }
+
+    /* Reset-ish */
+    *{box-sizing:border-box}
+    html,body{
+      height:100%;
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
+      color:#0f172a;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      padding:2rem;
+    }
+
+    /* Center container */
+    .container{
+      max-width:var(--max-width);
+      margin: 0 auto;
+      display:flex;
+      flex-direction:column;
+      gap: var(--gap);
+      align-items:stretch;
+    }
+
+    /* Header */
+    .site-header{
+      text-align:center;
+      margin-bottom:0.25rem;
+    }
+    .site-header h1{
+      font-size:1.6rem;
+      margin:0;
+      color:var(--accent);
+      letter-spacing: -0.5px;
+    }
+
+    /* Card */
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.92), var(--card-bg));
+      border-radius: var(--radius);
+      padding:1.25rem 1.5rem;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(99,102,241,0.06);
+    }
+
+    /* Paragraphs and small text */
+    .intro{
+      margin:0 0 0.75rem 0;
+      font-size:1rem;
+      color:#0b1220;
+      white-space:pre-wrap;
+    }
+
+    .meta{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:0.5rem;
+      margin-top:0.5rem;
+      color:var(--muted);
+    }
+    .meta a{
+      color:var(--accent);
+      text-decoration:none;
+    }
+    .meta a:hover{ text-decoration:underline; }
+
+    /* Small screens */
+    @media (max-width:420px){
+      :root{ --max-width:100%; }
+      .site-header h1{ font-size:1.25rem; }
+      .card{ padding:1rem; }
+    }
+    </style>
 </head>
 <body>
-    <h1>Pagina de info sobre autores de blogs</h1>
-    <p>
-        Hola, soy la creadora del blog de Simón, mi gato, y acá voy a contarles un poco sobre mí: nací el 1 de julio de 2007, actualmente tengo 18 años. Vivo con mi familia y mis dos mascotas (Simón y Toto (una tortuga)). Estoy por terminar el secundario en el Colegio Calasanz y después de graduarme quiero estudiar derecho y adquirir un poco de experiencia laboral dentro de lo que pueda, aunque sea para poder ahorrar y tener mi propio dinero. Hablando a largo plazo, quiero vivir en un departamento con mi novio y un gato maine coon, y me imagino viajando dos veces por año. Espero que disfruten el blog de mi gato.
-    </p>
+    <main class="container">
+        <header class="site-header">
+            <h1>Pagina de info sobre autores de blogs</h1>
+        </header>
+
+        <section class="card">
+            <p class="intro">
+                Hola, soy la creadora del blog de Simón, mi gato, y acá voy a contarles un poco sobre mí: nací el 1 de julio de 2007, actualmente tengo 18 años. Vivo con mi familia y mis dos mascotas (Si[...])
+            </p>
+
+            <footer class="meta">
+                <small>Contacto: <a href="mailto:tu-email@ejemplo.com">tu-email@ejemplo.com</a></small>
+            </footer>
+        </section>
+    </main>
 </body>
 </html>
